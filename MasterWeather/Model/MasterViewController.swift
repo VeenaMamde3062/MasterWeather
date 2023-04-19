@@ -27,7 +27,7 @@ class MasterViewController: UIViewController {
     @IBOutlet weak var humidity3: UILabel!
     @IBOutlet weak var condition3: UILabel!
     
-    var weatherManager = WeatherManager()
+//    var weatherManager = WeatherManager()
     var q : String = ""
     var dt : String = ""
     var end_dt : String = ""
