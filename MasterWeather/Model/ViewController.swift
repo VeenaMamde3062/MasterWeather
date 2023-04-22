@@ -14,12 +14,13 @@ class ViewController: UIViewController{
     @IBOutlet weak var endDateField: UITextField!
     @IBOutlet weak var langField: UITextField!
     @IBOutlet weak var hourField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var datePicker = UIDatePicker()
     var dateFormatter = DateFormatter()
-//    var weatherManager = WeatherManager()
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.isHidden = true
         locationField.delegate = self
         startDateField.delegate = self
         endDateField.delegate = self
@@ -28,19 +29,25 @@ class ViewController: UIViewController{
     }
     
     @IBAction func submitPressed(_ sender: UIButton) {
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+        do{
+            sleep(5)
+        }
+        activityIndicator.isHidden = true
+        activityIndicator .stopAnimating()
         performSegue(withIdentifier: "goToWeather", sender: self)
-//        if let location = locationField.text,let startDate = startDateField.text,let endDate = endDateField.text,let language = langField.text,let hour = hourField.text{
-//            weatherManager.requestInfo(q: location, dt: startDate, end_dt: endDate, lang: language, hour: hour)
-//        }
+
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToWeather"{
-            let masterVC = segue.destination as! MasterViewController
-            masterVC.q = locationField.text!
-            masterVC.dt = startDateField.text!
-            masterVC.end_dt = endDateField.text!
-            masterVC.lang = langField.text!
-            masterVC.hour = hourField.text!
+            let weatherVC = segue.destination as! WeatherViewController
+            weatherVC.q = locationField.text!
+            weatherVC.dt = startDateField.text!
+            weatherVC.end_dt = endDateField.text!
+            weatherVC.lang = langField.text!
+            weatherVC.hour = hourField.text!
+            
         }
     }
 }
