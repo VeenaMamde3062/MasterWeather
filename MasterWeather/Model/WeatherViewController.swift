@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class WeatherViewController: UIViewController{
     var weatherArray = [ForecastDay]()
@@ -67,13 +68,31 @@ extension WeatherViewController: UITableViewDelegate,UITableViewDataSource{
         let minTemp = String(forecastday.day.mintemp_c)
         let humidity = String(forecastday.day.avghumidity)
         let condition = String(forecastday.day.condition.text)
+        let imageURL = String(forecastday.day.condition.icon)
+        let weatherImageURL = "https:\(imageURL)"
         let time = String(forecastday.hour[0].time)
         cell.maxtemp.text = "MaxTemp: \(maxTemp)"
         cell.mintemp.text = "MinTemp: \(minTemp)"
         cell.humidity.text = "Humidity: \(humidity)%"
         cell.condition.text = "Condition: \(condition)"
         cell.time.text = "Time: \(time)"
+        cell.weatherImage.sd_setImage(with: URL(string: weatherImageURL))
         return cell
+    }
+}
+extension WeatherViewController: UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == ""{
+            getData(q, dt, end_dt, lang, hour)
+        }else{
+            weatherArray = weatherArray.filter({ (ForecastDay) in
+                return ForecastDay.day.condition.text.lowercased().contains(searchText.lowercased())
+            })
+        }
+        self.myTableView.reloadData()
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }
 

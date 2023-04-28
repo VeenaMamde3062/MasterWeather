@@ -15,6 +15,7 @@ class MyTableViewCell: UITableViewCell {
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var humidity: UILabel!
     @IBOutlet weak var condition: UILabel!
+    @IBOutlet weak var weatherImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

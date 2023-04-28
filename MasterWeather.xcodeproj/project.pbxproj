@@ -13,7 +13,6 @@
 		330C494D29E593F9005E84D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330C494B29E593F9005E84D5 /* Main.storyboard */; };
 		330C494F29E593FA005E84D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330C494E29E593FA005E84D5 /* Assets.xcassets */; };
 		330C495229E593FA005E84D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330C495029E593FA005E84D5 /* LaunchScreen.storyboard */; };
-		3361673F29ED7F2A0099367C /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3361673E29ED7F2A0099367C /* WeatherModel.swift */; };
 		3386A94829F18283008680AE /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3386A94729F18283008680AE /* WeatherViewController.swift */; };
 		3386A94A29F1879C008680AE /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3386A94929F1879C008680AE /* WeatherData.swift */; };
 		33D22B8929E5AF4700A66C7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D22B8829E5AF4700A66C7A /* ViewController.swift */; };
@@ -29,7 +28,6 @@
 		330C494E29E593FA005E84D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		330C495129E593FA005E84D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		330C495329E593FA005E84D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3361673E29ED7F2A0099367C /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		3386A94729F18283008680AE /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		3386A94929F1879C008680AE /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		33D22B8829E5AF4700A66C7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 		3386767429E6B9F9002419C6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3361673E29ED7F2A0099367C /* WeatherModel.swift */,
 				3386A94929F1879C008680AE /* WeatherData.swift */,
 			);
 			path = Controller;
@@ -250,7 +247,6 @@
 				33D22B8929E5AF4700A66C7A /* ViewController.swift in Sources */,
 				3386A94829F18283008680AE /* WeatherViewController.swift in Sources */,
 				330C494629E593F9005E84D5 /* AppDelegate.swift in Sources */,
-				3361673F29ED7F2A0099367C /* WeatherModel.swift in Sources */,
 				3386A94A29F1879C008680AE /* WeatherData.swift in Sources */,
 				330C494829E593F9005E84D5 /* SceneDelegate.swift in Sources */,
 			);
@@ -407,6 +403,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -435,6 +432,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

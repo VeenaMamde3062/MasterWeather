@@ -8,5 +8,6 @@ target 'MasterWeather' do
   # Pods for MasterWeather
   pod 'SwiftyJSON'
   pod 'Alamofire', '~>4.4'
+  pod 'SDWebImage'
 
 end

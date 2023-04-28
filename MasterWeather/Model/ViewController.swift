@@ -14,13 +14,13 @@ class ViewController: UIViewController{
     @IBOutlet weak var endDateField: UITextField!
     @IBOutlet weak var langField: UITextField!
     @IBOutlet weak var hourField: UITextField!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var activityIN: UIActivityIndicatorView!
     
     var datePicker = UIDatePicker()
     var dateFormatter = DateFormatter()
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicator.isHidden = true
+        activityIN.isHidden = true
         locationField.delegate = self
         startDateField.delegate = self
         endDateField.delegate = self
@@ -29,15 +29,14 @@ class ViewController: UIViewController{
     }
     
     @IBAction func submitPressed(_ sender: UIButton) {
-        activityIndicator.isHidden = false
-        activityIndicator.startAnimating()
+        activityIN.isHidden = false
+        activityIN.startAnimating()
         do{
             sleep(5)
         }
-        activityIndicator.isHidden = true
-        activityIndicator .stopAnimating()
+        activityIN.isHidden = true
+        activityIN.stopAnimating()
         performSegue(withIdentifier: "goToWeather", sender: self)
-
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToWeather"{

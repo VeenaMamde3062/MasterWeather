@@ -27,4 +27,5 @@ struct Hour : Decodable{
 }
 struct Condition: Decodable {
     let text : String
+    let icon : String
 }
